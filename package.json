@@ -1,0 +1,28 @@
+{
+  "name": "validated-sqs",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  },
+  "author": "Luke Shay <https://github.com/lukeshay>",
+  "license": "Apache-2.0",
+  "description": "Validate SQS messages using JSON Schema",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.699.0",
+    "ajv": "^8.17.1"
+  },
+  "devDependencies": {
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^22.9.3",
+    "aws-lambda": "^1.0.7",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}

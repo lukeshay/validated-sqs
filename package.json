@@ -1,19 +1,33 @@
 {
   "name": "validated-sqs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "exports": "./dist/index.mjs",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+github.com:lukeshay/validated-sqs.git"
+  },
+  "keywords": [
+    "aws",
+    "sqs",
+    "jsonschema",
+    "json-schema",
+    "ajv"
+  ],
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "format": "biome check --unsafe --write ."
   },
   "author": "Luke Shay <https://github.com/lukeshay>",
   "license": "Apache-2.0",
   "description": "Validate SQS messages using JSON Schema",
   "dependencies": {
     "@aws-sdk/client-sqs": "^3.699.0",
+    "@biomejs/biome": "^1.9.4",
     "ajv": "^8.17.1"
   },
   "devDependencies": {
